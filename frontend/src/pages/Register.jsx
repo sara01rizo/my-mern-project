@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { FaUser } from 'react-icons'
+import { FaUser } from 'react-icons/fa'
 
 function Register() {
     const [formData, setFormData] = useState({
