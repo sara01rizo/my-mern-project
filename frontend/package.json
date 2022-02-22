@@ -1,6 +1,14 @@
 {
   "name": "frontend",
   "version": "0.1.0",
+  "configurations": [
+    {
+        "request": "launch",
+        "name": "Launch Chrome against localhost",
+        "url": "https://localhost:3000",
+        "type": "dart"
+    }
+],
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.7.2",
