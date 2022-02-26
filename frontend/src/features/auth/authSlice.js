@@ -9,7 +9,7 @@ const initialState = {
     isError: false,
     isSucccess: false,
     isLoading: false,
-    message: ''
+    message: '',
 }
 
 // Register user
@@ -42,7 +42,23 @@ export const authSlice = createSlice({
             state.message = ''
         }
     },
-    extraReducers: () => {}
+    extraReducers: (builder) => {
+      builder
+        .addCase(register.pending, (state) => {
+          state.isLoading = true
+        })
+        .addCase(register.fulfilled, (state, action) => {
+          state.isLoading = false
+          state.isSuccess = true
+          state.user = action.payload
+        })
+        .addCase(register.rejected, (state, action) => {
+          state.isLoading = false
+          state.isError = true
+          state.message = action.payload
+          state.user = undefined
+        })
+    },
 })
 
 //that way we can use reset in a component to get the actions
