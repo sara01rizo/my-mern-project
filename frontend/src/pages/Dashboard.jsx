@@ -44,16 +44,18 @@ function Dashboard() {
 
     <section className="content">
       {goals.length > 0 ? (
-        <div className="goals">
+        <div className="div-goals">
           {goals.map((goal) => (
             <GoalItem key={goal._id} goal={goal} />
           ))}
         </div>
-      )}
+      ) : (<h3>You have no set any Goals</h3>)}
     </section>
 
     </>
   )
 }
+
+//expression    {goals.length > 0 ? () : ()}    inside a section
 
 export default Dashboard
