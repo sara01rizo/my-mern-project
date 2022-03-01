@@ -9,11 +9,21 @@
 body {
   font-family: 'Poppins', sans-serif;
   height: 100vh;
+  background: #c72200; /* Old browsers */
+  background: -moz-linear-gradient(top,  #c72200 0%, #e86c57 0%, #ea2803 0%, #ff6600 100%, #f3c5bd 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #c72200 0%,#e86c57 0%,#ea2803 0%,#ff6600 100%,#f3c5bd 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #c72200 0%,#e86c57 0%,#ea2803 0%,#ff6600 100%,#f3c5bd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c72200', endColorstr='#f3c5bd',GradientType=0 ); /* IE6-9 */
+  ;
 }
 
 a {
   text-decoration: none;
   color: #000;
+}
+
+a :hover {
+   color: #ddd;
 }
 
 p {
@@ -83,7 +93,7 @@ h3 {
 }
 
 .heading p {
-  color: #828282;
+  color: #282828;
 }
 
 .goals {
